@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Itim&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply bg-slate-200;
+  /* Replace 'bg-black' with the desired background color class */
+  /* @apply font-Itim; */
+  /* @apply text-lg */
+}
+
+.card_preview-text {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.logo {
+  @apply bg-white p-4;
+  /* เพิ่มการตั้งค่าสำหรับรูปภาพ */
+  background-image: url('https://www.bangkokhospitalpluakdaeng.com/wp-content/uploads/2023/06/pluakdaeng-Logo.png');
+  background-size: cover;
+  background-position: center;
+  width: auto;
+  height: 95px;
+}
+
+
+@media screen and (min-width: 1024px) {
+  .logo {
+    @apply bg-white p-4;
+    /* เพิ่มการตั้งค่าสำหรับรูปภาพ */
+    background-image: url('https://www.bangkokhospitalpluakdaeng.com/wp-content/uploads/2023/06/pluakdaeng-Logo.png');
+    background-size: cover;
+    background-position: center;
+    width: auto;
+    height: 150px;
+  }
+}
+
+.logo2 {
+  background-image: url('https://www.bangkokhospitalpluakdaeng.com/wp-content/uploads/2023/06/pluakdaeng-Logo.png');
+  background-size: contain;
+  width: auto;
+  height: 45px;
+}
+
+/* CSS */
+.input-container {
+  position: relative;
+  margin-top: 1rem;
+  /* เพิ่มขึ้นเล็กน้อยเพื่อให้มีพื้นที่ว่างด้านบนของ input */
+}
+
+.input-container label {
+  position: absolute;
+  top: 50%;
+  left: 8px;
+  transform: translateY(-50%);
+  transition-duration: 5s;
+  pointer-events: none;
+  transition: transform 0.2s ease-out, font-size 0.2s ease-out;
+}
+
+.input-container input {
+  width: 100%;
+  padding: 15px;
+  /* ใช้ padding เล็กน้อยเพื่อปรับระยะห่างระหว่าง label และ input */
+}
+
+.input-container input:focus+label,
+.input-container input:not(:placeholder-shown)+label {
+  transform: translateY(-200%);
+  font-size: 16px;
+  /* ปรับขนาดของ font-size เมื่อ label เลื่อนขึ้น */
+}
+
+.selected-link {
+  background-color: blue;
+  color: black;
+  transition: all ease-out 0.2s;
+  padding: 2px;
+  border-radius: 5px;
+}
+
